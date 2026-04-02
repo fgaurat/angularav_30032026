@@ -1,0 +1,20 @@
+
+@baseURL = http://localhost:3000
+###
+GET {{baseURL}}/todos
+
+###
+
+GET {{baseURL}}/todos/1
+
+###
+DELETE {{baseURL}}/todos/12
+
+###
+POST {{baseURL}}/todos
+Content-Type: application/json
+
+{
+  "title": "Angular",
+  "completed": false
+}   

@@ -1,0 +1,36 @@
+<h2>todo-reactive-form</h2>
+
+<div class="card" style="width: 18rem">
+  <div class="card-body">
+    <form class="row g-3" (ngSubmit)="submitTodo()" [formGroup]="todoForm">
+      <div class="col-12">
+        <label for="todoTitle" class="form-label">Titre</label>
+        <input
+          type="text"
+          formControlName="title"
+          name="todoTitle"
+          class="form-control"
+          placeholder="Todo title..."
+        />
+
+        @if (isTitleValid) {
+          <div class="alert alert-danger">Ce champ est requis !!!</div>
+        }
+      </div>
+      <div class="col-12">
+        <div class="form-check">
+          <input
+            formControlName="completed"
+            name="todoCompleted"
+            class="form-check-input"
+            type="checkbox"
+          />
+          <label class="form-check-label" for="todoCompleted"> Completed </label>
+        </div>
+      </div>
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary" [disabled]="todoForm.invalid">Ajouter</button>
+      </div>
+    </form>
+  </div>
+</div>

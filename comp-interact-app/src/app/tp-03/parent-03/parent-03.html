@@ -1,0 +1,11 @@
+<p>parent-03 works!</p>
+
+<button (click)="theCounter.increment()">inc</button>
+
+<app-child-03 #theCounter/>
+
+<hr>
+
+<button (click)="incrementFromParent()">inc</button>
+<app-child-03 #theOtherCounter/>
+

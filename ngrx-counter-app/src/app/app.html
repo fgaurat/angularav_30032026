@@ -1,0 +1,8 @@
+<h1>Hello, {{ title() }}</h1>
+
+count: {{ (count$|async)!.value }}
+
+
+
+<button (click)="increment()">inc</button>
+<button (click)="incrementBy()">inc by 12</button>
