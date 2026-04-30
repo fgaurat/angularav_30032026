@@ -1,0 +1,18 @@
+<h1>Hello, {{ title() }}</h1>
+
+<a routerLink="/page-01">Page 01</a>
+<a routerLink="/page-02">Page 02</a>
+<a routerLink="/page-03/Fred">Page 03</a>
+
+@if(keycloakService.hasRole('app-admin')) {
+  <a routerLink="/page-04">Page 04</a>
+}
+
+@if (keycloakService.isLoggedIn) {
+  Hello {{ keycloakService.username }}
+  <button (click)="keycloakService.logout()">Déconnexion</button>
+} @else {
+  <button (click)="keycloakService.login()">Connexion</button>
+}
+
+<router-outlet />

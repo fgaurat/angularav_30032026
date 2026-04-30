@@ -28,3 +28,9 @@ function f({firstName}) {
 
 const o4 = { firstName: "fred" };
 f(o4);
+
+
+
+export const f=()=>{
+
+}

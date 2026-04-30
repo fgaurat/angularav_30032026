@@ -14,3 +14,11 @@ firstName={{ firstName }}
   type="text"
   [value]="firstName"
   (keyup)="onChangeValue($event)">
+
+
+  <hr>
+
+<button (click)="showCounter = !showCounter">Toggle Counter</button>
+  @if(showCounter) {
+  <app-counter/>
+}
